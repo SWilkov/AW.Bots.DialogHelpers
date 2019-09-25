@@ -1,5 +1,5 @@
 ﻿using AW.Bots.DialogHelpers.Enums;
-using AW.Bots.DialogHelpersInterfaces;
+using AW.Bots.DialogHelpers.Interfaces;
 using Microsoft.Bot.Builder.Dialogs;
 using System;
 using System.Collections.Generic;
