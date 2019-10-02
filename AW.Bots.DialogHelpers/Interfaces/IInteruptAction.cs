@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace AW.Bots.DialogHelpers.Interfaces
 {
-  public interface IInteruptOptionService
-  {
-    Task<DialogTurnResult> Handle(DialogContext context, InteruptOption options,
+  public interface IInteruptAction
+  {    
+    Task<DialogTurnResult> Handle(DialogContext context, InteruptAction options,
       CancellationToken cancellationToken);
   }
 }

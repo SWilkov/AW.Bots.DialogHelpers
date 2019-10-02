@@ -4,9 +4,9 @@ using System;
 
 namespace AW.Bots.DialogHelpers.Factories
 {
-  public class InteruptOptionFactory : IInteruptOptionFactory
+  public class InteruptActionFactory : IInteruptActionFactory
   {
-    public InteruptOption Get(string option)
+    public InteruptAction Get(string option)
     {
       if (string.IsNullOrEmpty(option))
         throw new ArgumentNullException(nameof(option));
@@ -16,15 +16,15 @@ namespace AW.Bots.DialogHelpers.Factories
         case "help":
         case "h":
         case "?":
-          return InteruptOption.Help;
+          return InteruptAction.Help;
 
         case "cancel":
         case "quit":
         case "q":
-          return InteruptOption.Cancel;
+          return InteruptAction.Cancel;
 
         default:
-          return InteruptOption.Invalid;
+          return InteruptAction.Continue;
       }
     }
   }

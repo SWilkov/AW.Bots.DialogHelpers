@@ -1,9 +1,9 @@
 ﻿namespace AW.Bots.DialogHelpers.Enums
 {
-  public enum InteruptOption
+  public enum InteruptAction
   {
     Help,
     Cancel,
-    Invalid
+    Continue
   }
 }
