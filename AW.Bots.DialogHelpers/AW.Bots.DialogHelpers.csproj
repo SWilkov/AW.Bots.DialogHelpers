@@ -3,10 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix>alpha.1</VersionSuffix>
+    <VersionSuffix>alpha.5</VersionSuffix>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AW.Utils.Env" Version="1.0.0-alpha.3" />
     <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.5.2" />
     <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.5.2" />
   </ItemGroup>

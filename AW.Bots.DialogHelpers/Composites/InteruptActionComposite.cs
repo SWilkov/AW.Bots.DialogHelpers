@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace AW.Bots.DialogHelpers.Composites
 {
-  public class InteruptOptionComposite : IInteruptOptionService
+  public class InteruptActionComposite : IInteruptAction
   {
-    private readonly Dictionary<InteruptOption, IInteruptOptionService> _services;
-    public InteruptOptionComposite(Dictionary<InteruptOption, IInteruptOptionService> services)
+    private readonly Dictionary<InteruptAction, IInteruptAction> _services;
+    public InteruptActionComposite(Dictionary<InteruptAction, IInteruptAction> services)
     {
       _services = services;
     }
 
-    public async Task<DialogTurnResult> Handle(DialogContext context, InteruptOption interuptOption,
+    public async Task<DialogTurnResult> Handle(DialogContext context, InteruptAction interuptOption,
       CancellationToken cancellationToken)
     {
       if (context == null)

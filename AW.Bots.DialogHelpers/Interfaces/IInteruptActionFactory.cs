@@ -2,8 +2,8 @@
 
 namespace AW.Bots.DialogHelpers.Interfaces
 {
-  public interface IInteruptOptionFactory
+  public interface IInteruptActionFactory
   {
-    InteruptOption Get(string option);
+    InteruptAction Get(string option);
   }
 }

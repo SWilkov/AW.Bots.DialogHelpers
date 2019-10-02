@@ -5,32 +5,31 @@ using Microsoft.Bot.Schema;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AW.Bots.Dialogs
+namespace CoreBot1.Dialogs
 {
-  public class InteruptOptionDialog : ComponentDialog
+  public class InteruptActionDialog : ComponentDialog
   {
-    private readonly IInteruptOptionFactory _interuptOptionFactory;
-    private readonly IInteruptOptionService _interuptOptionService;
-    public InteruptOptionDialog(string dialogId, IInteruptOptionFactory interuptOptionFactory,
-      IInteruptOptionService interuptOptionService) 
+    private readonly IInteruptActionFactory _interuptOptionFactory;
+    private readonly IInteruptAction _interuptOptionService;
+    public InteruptActionDialog(string dialogId, IInteruptActionFactory interuptOptionFactory,
+      IInteruptAction interuptOptionService) 
       : base(dialogId)
     {
       _interuptOptionFactory = interuptOptionFactory;
       _interuptOptionService = interuptOptionService;
     }
-
+    
     protected override async Task<DialogTurnResult> OnContinueDialogAsync(DialogContext innerDc, 
       CancellationToken cancellationToken = default)
     {
-
       if (innerDc.Context.Activity.Type == ActivityTypes.Message)
       {
         var text = innerDc.Context.Activity.Text.ToLowerInvariant();
         var interuptOption = _interuptOptionFactory.Get(text);
-        if (interuptOption == InteruptOption.Invalid)
+        if (interuptOption == InteruptAction.Invalid)
         {
           //TODO Log
-          await innerDc.Context.SendActivityAsync("");
+          await innerDc.Context.SendActivityAsync("Invalid action");
           return null;
         }
 
