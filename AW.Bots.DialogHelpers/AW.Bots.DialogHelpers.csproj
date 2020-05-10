@@ -3,11 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix>alpha.7</VersionSuffix>
+    <VersionSuffix>alpha.8</VersionSuffix>
+    <Authors>Scott Williamson</Authors>
+    <Company>amurweb</Company>
+    <RepositoryUrl>https://github.com/SWilkov/AW.Bots.DialogHelpers</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AW.Utils.Env" Version="1.0.0-alpha.3" />
+    <PackageReference Include="AW.Utils.Env" Version="1.1.0-alpha.1" />
     <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.5.2" />
     <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.5.2" />
   </ItemGroup>

@@ -26,7 +26,8 @@ namespace CoreBot1.Dialogs
       {
         var text = innerDc.Context.Activity.Text.ToLowerInvariant();
         var interuptOption = _interuptOptionFactory.Get(text);
-        if (interuptOption == InteruptAction.Invalid)
+        if (interuptOption != InteruptAction.Cancel || interuptOption != InteruptAction.Continue
+          || interuptOption != InteruptAction.Help)
         {
           //TODO Log
           await innerDc.Context.SendActivityAsync("Invalid action");
